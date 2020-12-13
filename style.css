@@ -105,3 +105,19 @@ body {
 .name-profession span {
   font-size: 20px;
 }
+
+.info {
+  display: flex;
+
+}
+.info div:last-child {
+  color: gray;
+}
+.info div ul {
+  list-style-type: none;
+  padding: 20px 20px 20px 0px;
+}
+
+.info ul li {
+  padding: 5px 0px;
+}
