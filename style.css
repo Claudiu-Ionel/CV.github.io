@@ -158,10 +158,49 @@ body {
 .pro-skills {
   padding-top: 70px;
   width: 100%;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .pro-skills h2 {
   text-align: center;
   margin-bottom: 25px;
   font-size: 34px;
+}
+
+.skill-bars { 
+  width: 940px;
+  height: fit-content;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 40px;
+  border: 1px solid rgb(210, 210, 210);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+.skill-bars__wrapper {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.bar-wrapper {
+  width: 50%;
+  padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
+
+}
+.specs {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.legend {
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
 }
