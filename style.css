@@ -13,14 +13,35 @@ html {
 
 :root {
   --main-bg-color: rgb(27, 222, 121);
+  --rare-color: rgba(27, 147, 222, 0.879);
+  --epic-color: rgb(92, 51, 213);
+  --legendary-color: rgb(222, 160, 27);
+}
+.legendary {
+  background-color: var(--legendary-color);
+}
+.epic {
+  background-color: var(--epic-color);
+}
+.rare {
+  background-color: var(--rare-color);
+}
+.basic {
+  background-color: var(--main-bg-color);
 }
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   height: 2000px;
   width: 100%;
   background: rgb(235, 235, 235);
   display: flex;
   justify-content: center;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .main {
   position: relative;
@@ -94,7 +115,6 @@ body {
   border: 5px solid transparent;
   border-top: 5px solid var(--main-bg-color);
   border-left: 5px solid var(--main-bg-color);
-  
 }
 .name-profession {
   padding: 20px 0px;
@@ -114,7 +134,6 @@ body {
 
 .info {
   display: flex;
-
 }
 .info div:last-child {
   color: gray;
@@ -144,7 +163,6 @@ body {
 .social-item i {
   font-size: 22px;
   color: #fff;
-
 }
 
 .bio {
@@ -158,10 +176,7 @@ body {
 .pro-skills {
   padding-top: 70px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
 }
 .pro-skills h2 {
   text-align: center;
@@ -169,7 +184,7 @@ body {
   font-size: 34px;
 }
 
-.skill-bars { 
+.skill-bars {
   width: 940px;
   height: fit-content;
   background: #fff;
@@ -188,19 +203,61 @@ body {
 }
 .bar-wrapper {
   width: 50%;
+  height: 50px;
   padding: 0px 15px;
   display: flex;
   flex-direction: column;
-
+  justify-content: center;
 }
 .specs {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
 }
-
+.specs p,
+.specs span {
+  font-size: 14px;
+}
+.bar {
+  position: relative;
+  z-index: 1;
+  height: 5px;
+}
+.bar:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  height: 5px;
+  width: 399px;
+  background-color: inherit;
+  opacity: 0.2;
+}
 .legend {
   width: 100%;
   height: fit-content;
-  padding: 20px;
+  padding: 30px 20px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.legend-item {
+  width: 25%;
+  font-size: 15px;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.legend-item div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.legend-item p {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin-right: 5px;
 }
