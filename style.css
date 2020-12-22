@@ -173,12 +173,12 @@ section {
   text-align: center;
   line-height: 34px;
 }
-.pro-skills {
+.section {
   padding-top: 70px;
   width: 100%;
-
+  height: fit-content;
 }
-.pro-skills h2 {
+.section-title {
   text-align: center;
   margin-bottom: 25px;
   font-size: 34px;
@@ -261,3 +261,132 @@ section {
   font-weight: 600;
   margin-right: 5px;
 }
+
+.work-experience ul {
+  width: 940px;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.box {
+  position: relative;
+  height: fit-content;
+  background-color: #fff;
+  margin-bottom: 20px;
+  width: 45%;
+  padding: 20px;
+  border-top: 5px solid var(--main-bg-color);
+}
+.box.right::before{
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: '';
+  display: block;
+  margin-left: 2px;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 10px solid #fff;
+  top: 45px;
+  left: -10px;
+}
+.box.right::after{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  content: '';
+  display: block;
+  margin-left: 2px;
+  background-color: var(--main-bg-color);
+  border-radius: 50%;
+  top: 58px;
+  left: -3.4rem;
+}
+.box.left::before {
+    position: absolute;
+    width: 0;
+    height: 0;
+    content: '';
+    display: block;
+    margin-right: 2px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 10px solid #fff;
+    right: -10px;
+    top: 40px;
+}
+.box.left::after{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  content: '';
+  display: block;
+  margin-left: 2px;
+  background-color: var(--main-bg-color);
+  border-radius: 50%;
+  top: 58px;
+  right: -3.2rem;
+}
+/* .arrow-right {
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: -10px;
+  border: 5px solid transparent;
+  border-top: 5px solid var(--main-bg-color);
+  border-left: 5px solid var(--main-bg-color);
+}
+.arrow-left {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 10px;
+  border: 5px solid transparent;
+  border-top: 5px solid var(--main-bg-color);
+  border-left: 5px solid var(--main-bg-color);
+} */
+.box div {
+  display: flex;
+  justify-content: center;
+}
+.left{
+  margin-right: 40px;
+}
+.right {
+  margin: 40px 0px 0px 0px ;
+}
+
+.middle-bar{
+  position: absolute;
+  z-index: -1;
+  left: calc(50% - 2.5px);
+  width: 5px;
+  height: 100%;
+  padding: 1px;
+  background-color: var(--main-bg-color);
+  opacity: 0.3;
+}
+.year { 
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--main-bg-color);
+  margin: 0px 0px 15px 0px;
+}
+.company-name {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 22px;
+  margin: 0px 0px 20px 0px;
+}
+.job-position {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  color: gray;
+  margin: 0px 0px 30px 0px;
+}
+
