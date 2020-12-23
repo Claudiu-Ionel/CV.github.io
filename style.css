@@ -279,7 +279,9 @@ section {
   margin-bottom: 20px;
   width: 45%;
   padding: 20px;
+  border: 1px solid rgb(210, 210, 210);
   border-top: 5px solid var(--main-bg-color);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 .box.right::before{
   position: absolute;
@@ -304,7 +306,7 @@ section {
   background-color: var(--main-bg-color);
   border-radius: 50%;
   top: 58px;
-  left: -3.4rem;
+  left: -3.5rem;
 }
 .box.left::before {
     position: absolute;
@@ -329,7 +331,7 @@ section {
   background-color: var(--main-bg-color);
   border-radius: 50%;
   top: 58px;
-  right: -3.2rem;
+  right: -3.3rem;
 }
 /* .arrow-right {
   position: absolute;
@@ -352,6 +354,7 @@ section {
 .box div {
   display: flex;
   justify-content: center;
+  
 }
 .left{
   margin-right: 40px;
@@ -365,7 +368,8 @@ section {
   z-index: -1;
   left: calc(50% - 2.5px);
   width: 5px;
-  height: 100%;
+  height: 60%;
+  top: 64px;
   padding: 1px;
   background-color: var(--main-bg-color);
   opacity: 0.3;
