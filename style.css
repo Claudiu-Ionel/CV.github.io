@@ -31,7 +31,7 @@ html {
 }
 body {
   font-family: "Roboto", sans-serif;
-  height: 2000px;
+  height: fit-content;
   width: 100%;
   background: rgb(235, 235, 235);
   display: flex;
@@ -262,7 +262,8 @@ section {
   margin-right: 5px;
 }
 
-.work-experience ul {
+.work-experience ul,
+.education ul {
   width: 940px;
   display: flex;
   position: relative;
@@ -282,6 +283,14 @@ section {
   border: 1px solid rgb(210, 210, 210);
   border-top: 5px solid var(--main-bg-color);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  opacity: 0;
+  transition: all 500ms ease-in;
+}
+.left{
+  margin-right: 40px;
+}
+.right {
+  margin: 40px 0px 0px 0px ;
 }
 .box.right::before{
   position: absolute;
@@ -357,13 +366,10 @@ section {
   justify-content: center;
   
 }
-.left{
-  margin-right: 40px;
-}
-.right {
-  margin: 40px 0px 0px 0px ;
-}
 
+.fade-in {
+  opacity: 1;
+}
 .middle-bar{
   position: absolute;
   z-index: -1;
@@ -395,22 +401,36 @@ section {
   margin: 0px 0px 30px 0px;
 }
 .projects {
-  margin: 50px 0px;
+  width: 100%;
+  
+  margin: 50px 0px 20px;
 }
 .animation-area {
   width: 100%;
-  height: fit-content;
+  height: 200px;
 }
 .airplane-wrapper{
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   width: 100%;
-
+  height: 100%;
+}
+@keyframes plane {
+  0% {top:0px; left: 0px;}
+  25% {top: 10px; left: 2px;}
+  50% {top: 15px; left: 4px;}
+  75% {top: 10px; left: 2px;}
+  100% {top: 0px; left: 0px;}
 }
 .airplane-wrapper img {
   width: 200px;
   height: 150px;
+  position: relative;
+  animation-name: plane;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 .airplane--ribbon {
   width: 400px;
@@ -452,4 +472,6 @@ section {
   color: gray ;
   text-decoration: none;
 }
+
+
 
