@@ -408,13 +408,45 @@ section {
 .animation-area {
   width: 100%;
   height: 200px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.animation-area .clouds {
+  position: absolute;
+}
+
+.l-cloud {
+  color: var(--legendary-color);
+  top: 20px;
+  left: 430px;
+  font-size: 100px;
+  z-index: 0;
+}
+.e-cloud {
+  color: var(--epic-color);
+  left: 600px;
+  font-size: 80px;
+  z-index: 3;
+}
+.r-cloud {
+  color: var(--rare-color);
+  top: 150px;
+  left: 500px;
+  font-size: 60px;
+}
+.b-cloud {
+  color: var(--main-bg-color);
+  top: 100px;
+  left: 659px;
+  font-size: 40px;
 }
 .airplane-wrapper{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: fit-content;
   height: 100%;
 }
 @keyframes plane {
@@ -431,6 +463,7 @@ section {
   animation-name: plane;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+  z-index: 2;
 }
 .airplane--ribbon {
   width: 400px;
