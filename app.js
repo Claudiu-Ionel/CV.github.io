@@ -1,12 +1,17 @@
 const lis = document.querySelectorAll('.box');
-
-const options = {
+const plane = document.querySelector('.airplane-wrapper');
+const liOptions = {
   root: null,
   threshold: 0.25,
   rootMargin: '-200px 0px 0px 0px'
 };
+const planeOptions = {
+  root: null,
+  threshold: 0.25,
+  rootMargin: '-100px 0px 0px 0px'
+};
 
-const observer = new IntersectionObserver(function(entries,observer){
+const lisObserver = new IntersectionObserver(function(entries,observer){
   entries.forEach(entry =>{
     if (!entry.isIntersecting) {
       return;
@@ -14,8 +19,21 @@ const observer = new IntersectionObserver(function(entries,observer){
     entry.target.classList.add('fade-in');
     console.log(entry.target)
   });
-}, options);
+}, liOptions);
 
 lis.forEach(li => {
-  observer.observe(li);
+  lisObserver.observe(li);
 })
+
+const planeObserver = new IntersectionObserver(function(entries,planeObserver){
+  entries.forEach(entry =>{
+    if(!entry.isIntersecting){
+      return;
+    } else {
+      entry.target.classList.add('fly-in');
+      planeObserver.unobserve(entry.target);
+    }
+  })
+}, planeOptions);
+
+planeObserver.observe(plane);

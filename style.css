@@ -269,9 +269,24 @@ section {
   position: relative;
   z-index: 1;
   justify-content: space-between;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
   list-style-type: none;
+}
+.middle-bar{
+  position: absolute;
+  z-index: -1;
+  left: calc(50% - 2.5px);
+  width: 5px;
+  top: 62px;
+  padding: 1px;
+  background-color: var(--main-bg-color);
+  opacity: 0.3;
+}
+.work-experience .middle-bar {
+  height: 56%;
+  top: 84px;
 }
 .box {
   position: relative;
@@ -370,17 +385,7 @@ section {
 .fade-in {
   opacity: 1;
 }
-.middle-bar{
-  position: absolute;
-  z-index: -1;
-  left: calc(50% - 2.5px);
-  width: 5px;
-  height: 60%;
-  top: 62px;
-  padding: 1px;
-  background-color: var(--main-bg-color);
-  opacity: 0.3;
-}
+
 .year { 
   font-size: 16px;
   font-weight: 600;
@@ -436,10 +441,11 @@ section {
   font-size: 60px;
 }
 .b-cloud {
-  color: var(--main-bg-color);
+  color: rgb(247, 2, 255);
   top: 100px;
   left: 659px;
   font-size: 40px;
+  z-index: 1;
 }
 .airplane-wrapper{
   display: flex;
@@ -447,7 +453,14 @@ section {
   justify-content: center;
   align-items: center;
   width: fit-content;
+  position: relative;
+  right: -50%;
   height: 100%;
+  transition: all 1250ms ease-in;
+  z-index: 0;
+}
+.fly-in {
+  right: 0;
 }
 @keyframes plane {
   0% {top:0px; left: 0px;}
@@ -456,7 +469,7 @@ section {
   75% {top: 10px; left: 2px;}
   100% {top: 0px; left: 0px;}
 }
-.airplane-wrapper img {
+/* .airplane-wrapper img {
   width: 200px;
   height: 150px;
   position: relative;
@@ -464,6 +477,17 @@ section {
   animation-duration: 2s;
   animation-iteration-count: infinite;
   z-index: 2;
+} */
+.airplane-wrapper i.fa-plane {
+  font-size: 80px;
+  margin-right: 20px;
+  position: relative;
+  animation-name: plane;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  z-index: 2;
+  transform: rotate(180deg);
+  color: var(--main-bg-color)
 }
 .airplane--ribbon {
   width: 400px;
@@ -506,5 +530,37 @@ section {
   text-decoration: none;
 }
 
+.education .hello {
+  width: fit-content;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 5px 8px;
+  margin-bottom: 12px;
+}
 
+.education .institute-name {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  color: gray;
+  margin: 0px 0px 30px 0px;
+  justify-content: flex-start;
+}
 
+.education .certificate {
+  font-weight: 600;
+  font-size: 22px;
+  margin: 0px 0px 10px 0px;
+  justify-content: flex-start;
+}
+.education .middle-bar {
+  height: 72%;
+  top: 74px;
+}
+section.education li.box:nth-child(6) {
+  margin: 10px 0px 0px 0px;
+}
+
+section.work-experience li.box:nth-child(4) {
+  margin: -20px 0px 0px 0px;
+}
