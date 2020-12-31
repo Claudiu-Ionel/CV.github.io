@@ -29,26 +29,40 @@ html {
 .basic {
   background-color: var(--main-bg-color);
 }
+.legendary-font {
+  color: var(--legendary-color);
+}
+.epic-font {
+  color: var(--epic-color);
+}
+.rare-font {
+  color: var(--rare-color);
+}
+.basic-font {
+  color: var(--main-bg-color);
+}
 body {
   font-family: "Roboto", sans-serif;
   height: fit-content;
   width: 100%;
   background: rgb(235, 235, 235);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
 }
 section {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 70px;
 }
 .main {
   position: relative;
   z-index: 1;
   width: 100%;
   height: fit-content;
-  margin: 150px;
+  margin-top: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -285,7 +299,7 @@ section {
   opacity: 0.3;
 }
 .work-experience .middle-bar {
-  height: 56%;
+  height: 55%;
   top: 84px;
 }
 .box {
@@ -424,26 +438,27 @@ section {
 .l-cloud {
   color: var(--legendary-color);
   top: 20px;
-  left: 430px;
+  left: 585px;
   font-size: 100px;
-  z-index: 0;
+  z-index: 1;
 }
 .e-cloud {
   color: var(--epic-color);
-  left: 600px;
+  top: -10px;
+  left: 740px;
   font-size: 80px;
-  z-index: 3;
+  z-index: 2;
 }
 .r-cloud {
   color: var(--rare-color);
-  top: 150px;
-  left: 500px;
+  top: 140px;
+  left: 625px;
   font-size: 60px;
 }
 .b-cloud {
   color: rgb(247, 2, 255);
   top: 100px;
-  left: 659px;
+  left: 800px;
   font-size: 40px;
   z-index: 1;
 }
@@ -563,4 +578,56 @@ section.education li.box:nth-child(6) {
 
 section.work-experience li.box:nth-child(4) {
   margin: -20px 0px 0px 0px;
+}
+
+.interests {
+  width: 940px;
+  height: fit-content;
+}
+.hobbies-wrapper {
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  padding: 40px 50px;
+  text-align: center;
+}
+.hobbies {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.hobby {
+  margin: 20px 20px 0px;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.hobby-info {
+  position: absolute;
+  top: 40px;
+  font-size: 12px;
+  background: rgb(36, 36, 36);
+  padding: 5px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: all 250ms ease-in;
+  color: #fff !important;
+}
+
+.hobby:hover .hobby-info {
+  opacity: 1;
+  top: 55px;
+}
+.hobbies i {
+  font-size: 40px;
+}
+
+footer {
+  margin-top: 40px;
+  background-color: coral;
+  width: 100%;
+  height: fit-content;
+  padding: 40px;
 }
