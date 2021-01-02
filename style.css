@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   width: 100%;
+
 }
 
 *,
@@ -49,24 +50,25 @@ body {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
+  overflow-x: hidden;
 }
 section {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 70px;
+  padding: 70px 20px 0px 20px;
 }
 .main {
   position: relative;
   z-index: 1;
   width: 100%;
   height: fit-content;
-  margin-top: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
 }
 .banner {
   position: absolute;
@@ -81,15 +83,19 @@ section {
   z-index: 1;
   width: 940px;
   height: fit-content;
+    margin-top: 150px;
   background: #fff;
   display: flex;
   flex-direction: column;
+  padding: 0px;
+
 }
 .top-info {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: fit-content;
+    padding: 57px 50px 15px 50px;
 }
 .bottom-social {
   display: flex;
@@ -216,12 +222,13 @@ section {
   flex-wrap: wrap;
 }
 .bar-wrapper {
-  width: 50%;
+  width: 46%;
   height: 50px;
-  padding: 0px 15px;
+  margin: 0px 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 .specs {
   display: flex;
@@ -233,7 +240,7 @@ section {
   font-size: 14px;
 }
 .bar {
-  position: relative;
+  /* position: relative; */
   z-index: 1;
   height: 5px;
 }
@@ -243,7 +250,7 @@ section {
   z-index: 0;
   left: 0;
   height: 5px;
-  width: 399px;
+  width: 100%;
   background-color: inherit;
   opacity: 0.2;
 }
@@ -253,6 +260,7 @@ section {
   padding: 30px 20px 0px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
 }
 .legend-item {
@@ -425,7 +433,7 @@ section {
   margin: 50px 0px 20px;
 }
 .animation-area {
-  width: 100%;
+  width: 940px;
   height: 200px;
   display: flex;
   justify-content: center;
@@ -438,29 +446,29 @@ section {
 .l-cloud {
   color: var(--legendary-color);
   top: 20px;
-  left: 585px;
+  left: 95px;
   font-size: 100px;
-  z-index: 1;
+  z-index: 0;
 }
 .e-cloud {
   color: var(--epic-color);
   top: -10px;
-  left: 740px;
+  left: 250px;
   font-size: 80px;
   z-index: 2;
 }
 .r-cloud {
   color: var(--rare-color);
+  left: 170px;
   top: 140px;
-  left: 625px;
   font-size: 60px;
 }
 .b-cloud {
   color: rgb(247, 2, 255);
   top: 100px;
-  left: 800px;
+  left: 300px;
   font-size: 40px;
-  z-index: 1;
+  z-index: 0;
 }
 .airplane-wrapper{
   display: flex;
@@ -468,14 +476,14 @@ section {
   justify-content: center;
   align-items: center;
   width: fit-content;
-  position: relative;
+  position: absolute;
   right: -50%;
   height: 100%;
   transition: all 1250ms ease-in;
   z-index: 0;
 }
 .fly-in {
-  right: 0;
+  right: 23%;
 }
 @keyframes plane {
   0% {top:0px; left: 0px;}
@@ -630,4 +638,143 @@ footer {
   width: 100%;
   height: fit-content;
   padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .section-title {
+  width: 100%;
+}
+
+.references {
+  width: 940px;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.references h3 {
+  text-align: center;
+}
+.references-item {
+  width: 33.33%;
+  height: fit-content;
+}
+.references-item ul {
+  list-style-type: none;
+  text-align: center;
+  margin-top: 20px;
+}
+.references-item ul li {
+  padding: 5px;
+}
+.references-item ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+@media only screen and (max-width: 940px) {
+  .profile,
+  .bio,
+  .skill-bars,
+  .work-experience ul,
+  .animation-area,
+  .education ul,
+  .interests,
+  .bar-wrapper,
+  .bar::before,
+  .references {
+  width: 100%;
+
+}
+  .skill-bars__wrapper {
+    flex-direction: column;
+  }
+  /* .box.right::after {
+    left: calc((6vw - 5px) * -1);
+  }
+  .box.left::after {
+    right: calc((6vw - 3px) * -1);
+  } */
+  .work-experience ul,
+  .education ul {
+    flex-direction: column;
+  }
+  .left {
+    margin: 0px 0px 10px;
+  }
+  .right {
+    margin: 0px 0px 10px;
+  }
+  section.work-experience li.box:nth-child(4) {
+    margin: 0px 0px 10px;
+  }
+  section.education li.box:nth-child(6) {
+    margin: 0px 0px 10px;
+  }
+  .box.left::after,
+  .box.left::after,
+  .box.left::before,
+  .box.left::before,
+  .box.right::after,
+  .box.right::after,
+  .box.right::before,
+  .box.right::before{
+    display: none;
+  }
+  .work-experience .middle-bar,
+  .education .middle-bar  {
+    height: 99%;
+    top: 0;
+  }
+  .hobbies {
+    flex-wrap: wrap;
+  }
+  section.projects {
+    padding: 0px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .top-info {
+    flex-direction: row;
+  }
+  .my-image {
+    width: 50%;
+    margin: 20px 20px;
+    background-size: contain;
+  }
+  .personal-info {
+    width: 50%;
+    padding: 0px;
+  }
+  .top-info {
+    padding: 20px 20px;
+  }
+}
+
+@media only screen and (max-width: 635px) {
+  .top-info {
+    flex-direction: column;
+  }
+  .my-image {
+    width: 93%;
+    height: 500px;
+    padding: 20px;
+    background-size: cover;
+  }
+    .personal-info {
+    width: 100%;
+    padding: 0px;
+  }
+  .info div ul {
+    font-size: 20px;
+  }
+  .airplane--ribbon {
+    width: 250px;
+  }
 }
