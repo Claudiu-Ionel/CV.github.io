@@ -68,7 +68,6 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
 }
 .banner {
   position: absolute;
@@ -255,12 +254,11 @@ section {
   opacity: 0.2;
 }
 .legend {
-  width: 100%;
+  max-width: 100%;
   height: fit-content;
   padding: 30px 20px 0px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
 }
 .legend-item {
@@ -269,6 +267,7 @@ section {
   text-align: center;
   vertical-align: middle;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   flex-direction: row;
 }
@@ -477,13 +476,14 @@ section {
   align-items: center;
   width: fit-content;
   position: absolute;
-  right: -50%;
+  right: 5%;
   height: 100%;
-  transition: all 1250ms ease-in;
+  transition: all 500ms ease-in;
   z-index: 0;
 }
 .fly-in {
-  right: 23%;
+  right: 30%;
+  display: flex;
 }
 @keyframes plane {
   0% {top:0px; left: 0px;}
@@ -513,7 +513,7 @@ section {
   color: var(--main-bg-color)
 }
 .airplane--ribbon {
-  width: 400px;
+  width: 300px;
   height: fit-content;
   background-color: #fff;
   border-top: 5px solid var(--main-bg-color);
@@ -694,6 +694,9 @@ footer .section-title {
   .skill-bars__wrapper {
     flex-direction: column;
   }
+  .bar-wrapper {
+    margin: 0;
+  }
   /* .box.right::after {
     left: calc((6vw - 5px) * -1);
   }
@@ -755,6 +758,9 @@ footer .section-title {
   .top-info {
     padding: 20px 20px;
   }
+  .fly-in {
+    right: 20%;
+  }
 }
 
 @media only screen and (max-width: 635px) {
@@ -762,9 +768,10 @@ footer .section-title {
     flex-direction: column;
   }
   .my-image {
-    width: 93%;
+    width: 100%;
     height: 500px;
     padding: 20px;
+    margin: 15px 0px;
     background-size: cover;
   }
     .personal-info {
@@ -772,9 +779,57 @@ footer .section-title {
     padding: 0px;
   }
   .info div ul {
-    font-size: 20px;
+    font-size: 19px;
+  }
+  .legend {
+   flex-wrap: wrap !important;
+ }
+ .fly-in {
+   right: 5%;
+ }
+}
+
+@media only screen and (max-width: 375px) {
+  .clouds {
+    display: none;
+  }
+  .fa-plane ,
+  .fa-plane::before,
+  .fa-plane::after {
+    display: none;
+  }
+  .airplane-wrapper i.fa-plane {
+    display: none;
+  }
+  .animation-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+  }
+  .airplane-wrapper {
+    display: flex;
+    justify-content: center;
   }
   .airplane--ribbon {
-    width: 250px;
+    position: relative;
+  }
+  .box {
+    width: 100%;
+  }
+  .fly-in {
+    right: auto;
+  }
+  .projects {
+    margin: 50px 0px 0px 0px;
+  }
+  .references {
+    flex-direction: column;
+  }
+  .references-item{
+    width: 100%;
+  }
+  .references-item ul {
+    margin: 10px 0px;
   }
 }
